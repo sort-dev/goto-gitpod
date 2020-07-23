@@ -13,7 +13,7 @@ tasks:
        && cd /workspace/assessment
        && shopt -s extglob
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
-       && git clone --bare https://github.com/deem-tests/gitpod-assessment-private /workspace/assessment/.git
+       && git clone --bare https://github.com/$ASSESSMENT_REPO /workspace/assessment/.git
        && git config core.bare false
        && git reset --hard HEAD 
        && echo "done."
