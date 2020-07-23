@@ -11,9 +11,10 @@ tasks:
   - init: >
        echo "creating assessment..." 
        && cd /workspace/assessment
+       && mv clone.sh ..
        && shopt -s extglob
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
-       && bash -c "git clone --bare https://github.com/$ASSESSMENT_REPO /workspace/assessment/.git"
+       && ../clone.sh
        && git config core.bare false
        && git reset --hard HEAD 
        && echo "done."
