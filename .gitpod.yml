@@ -11,6 +11,7 @@ tasks:
   - init: >
        echo "creating assessment..." 
        && cd /workspace/assessment
+       && shopt -s extglob
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
        && git clone --bare https://github.com/kohesive/solr-undertow.git /workspace/assessment/.git
        && git config core.bare false
