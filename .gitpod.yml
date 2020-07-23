@@ -10,8 +10,11 @@ ports:
 tasks:
   - init: >
        echo "creating assessment..." 
-       && rm -Rf /workspace/assessment/{.[!.],}* 
-       && git clone https://github.com/kohesive/solr-undertow.git /workspace/assessment 
+       && cd /workspace/assessment
+       && ls -Q --hide=README.md /workspace/assessment | xargs rm -Rf
+       && git clone --bare https://github.com/kohesive/solr-undertow.git /workspace/assessment/.git
+       && git config core.bare false
+       && git reset --hard HEAD 
        && cd /workspace/assessment 
        && echo "done."
     command: echo "ready!"
