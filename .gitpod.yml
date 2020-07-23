@@ -9,7 +9,7 @@ ports:
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - before: echo 'before'
-  - init: rm -Rf /workspace/assessment && git clone https://github.com/kohesive/solr-undertow.git /workspace/assessment
+  - init: cd /workspace && rm -Rf /workspace/assessment && git clone https://github.com/kohesive/solr-undertow.git /workspace/assessment && cd /workspace/assessment
     command: echo 'start script'
 
 workspaceLocation: "./assessment"    
