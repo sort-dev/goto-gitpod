@@ -12,5 +12,5 @@ tasks:
   - init: rm -Rf /workspace/assessment && git clone https://github.com/kohesive/solr-undertow.git /workspace/assessment
     command: echo 'start script'
 
-workspaceLocation: "/workspace/assessment"    
-checkoutLocation: "/workspace/assessment"
+workspaceLocation: "."    
+checkoutLocation: "assessment"
