@@ -11,7 +11,6 @@ tasks:
   - init: >
        echo "creating assessment..." 
        && cd /workspace/assessment
-       && mv clone.sh ..
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
        && sleep 2
        && git clone --bare https://github.com/$ASSESSMENT_REPO /workspace/assessment/.git
