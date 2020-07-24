@@ -12,9 +12,11 @@ tasks:
        echo "creating assessment..." 
        && cd /workspace/assessment
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
-       && sleep 2
-       && git clone --bare https://github.com/$ASSESSMENT_REPO /workspace/assessment/.git
-       && git config core.bare false
+       && git init
+       && git remote add origin https://github.com/deem-tests/gitpod-assessment-private.git
+       && sleep 1
+       && git fetch
+       && git checkout -t origin/master -f
        && git reset --hard HEAD 
        && echo "done."
     command: echo "ready!"
