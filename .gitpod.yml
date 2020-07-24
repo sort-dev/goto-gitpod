@@ -9,11 +9,11 @@ ports:
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: >
-       echo "creating assessment..." 
+       echo "creating assessment... $ASSESSMENT_REPO" 
        && cd /workspace/assessment
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
        && git init
-       && git remote add origin https://github.com/deem-tests/gitpod-assessment-private.git
+       && git remote add origin https://github.com/$ASSESSMENT_REPO.git
        && sleep 1
        && git fetch
        && git checkout -t origin/master -f
