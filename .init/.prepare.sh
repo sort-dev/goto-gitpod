@@ -1,5 +1,5 @@
 cd /workspace/assessment && \
-ls -adQ !(README.md) .[^.]* | xargs rm -Rf > /dev/null 2>&1 && \
+ls -adQ .[^.]* | xargs rm -Rf > /dev/null 2>&1 && \
 git init && \
 git remote add origin $ASSESSMENT_REPO && \
 git fetch && \
