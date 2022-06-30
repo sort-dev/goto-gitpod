@@ -13,7 +13,7 @@ tasks:
        && cd /workspace/assessment
        && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
        && git init
-       && git remote add origin https://github.com/$ASSESSMENT_REPO.git
+       && git remote add origin $ASSESSMENT_REPO
        && sleep 1
        && git fetch
        && git checkout -t origin/master -f
