@@ -42,6 +42,7 @@ vscode:
     - scalameta.metals
     - christian-kohler.npm-intellisense
     - gamunu.vscode-yarn
+    - Orta.vscode-jest
     
 github:
   prebuilds:
