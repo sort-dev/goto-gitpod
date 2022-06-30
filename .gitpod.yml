@@ -10,6 +10,7 @@ ports:
 tasks:
   - init: >
        echo "creating assessment... $ASSESSMENT_REPO" 
+       && cat /proc/$$/cmdline
        && cd /workspace/assessment
        && ./.prepare.sh
        && echo "done."
