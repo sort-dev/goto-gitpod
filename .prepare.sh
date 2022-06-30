@@ -9,6 +9,8 @@ git reset --hard HEAD
 
 if [ -f "package.json" ]; then
     echo "NPM Install..."
+    nvm install
+    nvm use
     npm install
 fi
 
