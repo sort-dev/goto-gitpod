@@ -24,9 +24,9 @@ checkoutLocation: "assessment"
 
 vscode:
   extensions:
+    - muhammad-sammy.csharp
     - redhat.java
     - vscjava.vscode-java-pack
-    - muhammad-sammy.csharp
     - fwcd.kotlin
     - richardwillis.vscode-gradle
     - kevgo.vscode-markdown-ide
