@@ -6,3 +6,13 @@ sleep 1 && \
 git fetch && \
 git checkout -t origin/$ASSESSMENT_BRANCH -f && \
 git reset --hard HEAD 
+
+if [ -f "package.json" ]; then
+    echo "NPM Install..."
+    npm install
+fi
+
+if [ -f "gradlew" ]; then
+    echo "Gradle build..."
+    ./gradlew build
+fi
