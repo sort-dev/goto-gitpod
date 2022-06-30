@@ -13,7 +13,7 @@ tasks:
        && cd /workspace/assessment
        && ./.prepare.sh
        && echo "done."
-    command: echo "ready!"
+    command: gp open README.md && echo "ready!"
 
 workspaceLocation: "assessment"    
 checkoutLocation: "assessment"
