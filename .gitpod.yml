@@ -27,7 +27,11 @@ vscode:
   extensions:
     - muhammad-sammy.csharp
     - redhat.java
-    - vscjava.vscode-java-pack
+    - richardwillis.vscode-gradle
+    - vscjava.vscode-java-dependency
+    - vscjava.vscode-java-test
+    - vscjava.vscode-maven
+    - vscjava.vscode-java-debug
     - fwcd.kotlin
     - richardwillis.vscode-gradle
     - kevgo.vscode-markdown-ide
