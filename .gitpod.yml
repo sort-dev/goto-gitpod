@@ -31,14 +31,11 @@ vscode:
     - fwcd.kotlin
     - richardwillis.vscode-gradle
     - kevgo.vscode-markdown-ide
-    - moog.sqlnotebook
     - andrewmcodes.rails-extension-power-pack
     - wesleyegberto.vscode-java-tests
     - cweijan.vscode-database-client2
     - hashicorp.terraform
     - scalameta.metals
-    - gengjiawen.npm-dependency-link
-    - vscode.npm
     - christian-kohler.npm-intellisense
     - gamunu.vscode-yarn
     
