@@ -11,13 +11,7 @@ tasks:
   - init: >
        echo "creating assessment... $ASSESSMENT_REPO" 
        && cd /workspace/assessment
-       && ls -adQ !(README.md) .[^.]* | xargs rm -Rf
-       && git init
-       && git remote add origin $ASSESSMENT_REPO
-       && sleep 1
-       && git fetch
-       && git checkout -t origin/master -f
-       && git reset --hard HEAD 
+       && ./.prepare.sh
        && echo "done."
     command: echo "ready!"
 
