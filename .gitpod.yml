@@ -8,6 +8,8 @@ ports:
     onOpen: open-preview
   - port: 9000
     onOpen: open-preview
+  - port: 8828 # Gradle daemon
+    onOpen: ignore
 
 tasks:
   - init: >
