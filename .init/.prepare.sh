@@ -1,7 +1,5 @@
 cd /workspace/assessment && \
-rm -Rf /workspace/assessment/.init &&\
-rm /workspace/assessment/.dockerignore && \
-rm -Rf /workspace/assessment/.git &&\
+ls -adQ !(README.md) .[^.]* | xargs rm -Rf > /dev/null 2>&1 && \
 git init && \
 git remote add origin $ASSESSMENT_REPO && \
 git fetch && \
