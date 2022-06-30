@@ -1,8 +1,9 @@
 cd /workspace/assessment && \
-ls -adQ .[^.]* | xargs rm -Rf > /dev/null 2>&1 && \
+rm -Rf /workspace/assessment/.init &&\
+rm /workspace/assessment/.dockerignore && \
+rm -Rf /workspace/assessment/.git &&\
 git init && \
 git remote add origin $ASSESSMENT_REPO && \
-sleep 1 && \
 git fetch && \
 git checkout -t origin/$ASSESSMENT_BRANCH -f && \
 git reset --hard HEAD 
@@ -17,4 +18,9 @@ fi
 if [ -f "gradlew" ]; then
     echo "Gradle build..."
     ./gradlew build
+fi
+
+if ls *.sln 1> /dev/null 2>&1; then
+    echo "Dotnet restore..."
+    dotnet restore
 fi

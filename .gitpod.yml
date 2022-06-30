@@ -1,5 +1,5 @@
 image:
-  file: .gitpod.Dockerfile
+  file: .init/.gitpod.Dockerfile
 
 ports:
   - port: 3000
@@ -15,7 +15,8 @@ tasks:
   - init: >
        echo "creating assessment... $ASSESSMENT_REPO" 
        && cd /workspace/assessment
-       && ./.prepare.sh
+       && .init/.prepare.sh
+       && rm -Rf .init/
        && echo "done."
   - command: gp open README.md && echo "ready!"
 
